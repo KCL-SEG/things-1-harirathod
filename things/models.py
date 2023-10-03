@@ -4,10 +4,14 @@ from django.db.models import Model
 
 class Thing(Model):
     name = models.CharField(
-        verbose_name="name")
+        verbose_name="name", 
+        unique=False, 
+        max_length=30)
     
     description = models.CharField(
-        verbose_name='description')
+        verbose_name='description', 
+        unique=False, 
+        max_length=120)
     
     quantity = models.IntegerField(
         verbose_name='quantity')
